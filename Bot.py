@@ -5,7 +5,7 @@ from time import sleep
 bot = telebot.TeleBot("7955678567:AAFuxFdjD__9-AoVOHZllzEt9htDyQOvDCw")
 
 # رابط المنتج
-product_url = "https://example.com/product"
+product_url = "https://www.dzrt.com/ar-sa/products/icy-rush"
 
 def check_availability():
     response = requests.get(product_url)
@@ -20,7 +20,7 @@ def start(message):
 def notify_availability():
     while True:
         if check_availability():
-            bot.send_message(YOUR_CHAT_ID, "المنتج متوفر الآن!")
+            bot.send_message(896277917, "المنتج متوفر الآن!")
         sleep(3600)  # فحص مرة كل ساعة
 
 if __name__ == "__main__":
